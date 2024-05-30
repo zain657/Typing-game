@@ -9,6 +9,7 @@ header{
     background-image: url(../imge/unsplash.jpg),linear-gradient(rgba(0, 0, 0, 0.833),rgba(0, 0, 0, 0.833));
     background-blend-mode: overlay;
     background-position: 0 0;
+    height: 100vh;
     background-size: cover;
 }
 
@@ -117,7 +118,10 @@ nav span{
 
 @media (max-width:430px) {
     .schedule{
-        bottom: 7%;
+        bottom: 0;
+    }
+    header{
+        height: 110vh;
     }
 }
 
