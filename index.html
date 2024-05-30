@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.css" />
+    <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- font-link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Pacifico&display=swap"
+        rel="stylesheet">
+
+    <title>simple game</title>
+</head>
+
+<body>
+    <header class="w-100 vh-100  overflow-auto">
+        <nav id="nav-co" class="navbar w-100 shadow-lg">
+            <div class="container-fluid position-relative">
+                <span class="position-absolute "><i id="mod" class="fa-solid fa-moon fs-1 ico-ho"></i></span>
+                <a class="navbar-brand m-auto fs-1 nv-a d-flex" href="#">
+                    <div class="icon-nav-pa position-relative me-3 d-flex justify-content-center align-items-center">
+                        <i class="fa-solid fa-i-cursor position-absolute fs-1 lo-mix z-0"></i>
+                        <i class="fa-solid fa-keyboard fs-1 z-3"></i>
+                    </div>
+                    Typing game
+                </a>
+            </div>
+        </nav>
+        <div class="ha overflow-auto mt-5">
+            <h1 class="text-center">
+                <span class="wh-sp text-white fw-bolder ">HELLO</span>
+            </h1>
+            <h2 id="h2" class="text-center mt-5"></h2>
+        </div>
+        <div class="second">
+            <button type="button" class="btn bbbttn nb-n d-flex justify-content-center align-items-center w-100 mt-5"
+                data-bs-toggle="modal" data-bs-target="#exampleModal" data-bs-whatever="@fat">
+                PLAY
+            </button>
+
+            <div class="modal  fade position-relative" id="exampleModal" tabindex="-1"
+                aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class=" modal-content">
+                        <div class="modal-header">
+                            <h1 class="modal-title fs-5" id="exampleModalLabel">
+                                Typing game
+                            </h1>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="message-text" class="col-form-label"><span class="sp">TYPE:</span>
+                                        <span id="change" class="text"></span>
+                                    </label>
+                                    <!-- <textarea class="form-control" id="message-text"></textarea> -->
+                                    <input type="text" class="form-control" id="message-text" />
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button id="closs" type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                                Close
+                            </button>
+                            <button class="co-b btn" id="bbt" type="button" class="btn btn-primary">
+                                Send message
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="b-hp container">
+                <button id="bu4" type="button" class="btn bbbttn bu4">
+                    ABOUT US
+                </button>
+                <div class="co za back rounded-5 overflow-hidden  text-center row text-center" id="about">
+                    <div class="col-md-6 rounded-5 m-auto" id="change-ab">
+                        <h2 class="mb-2 zaa fw-bolder">Typing game</h2>
+                        <p class=" fs-3 mb-2">
+                            This game was created by <span class="cco fw-bold">Zain</span> in
+                            the year 1445 AH.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div class="schedule position-absolute">
+                <button id="resultbtn" type="button" class="btn text-white">
+                    Results
+                </button>
+            </div> -->
+        </div>
+    </header>
+
+
+
+
+
+
+
+
+
+    <!-- Scrollable modal -->
+    <!-- Button trigger modal -->
+    <div class="schedule position-absolute">
+        <button type="button" class="btn text-white" data-bs-toggle="modal" data-bs-target="#exampleModal1">
+            Result
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade position-absolute mo2 top-0 bottom-0 start-0 end-0" id="exampleModal1" tabindex="-1"
+        aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-fullscreen">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5 " id="exampleModalLabel">Results</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body d-flex justify-content-center">
+                    <div id="tap1" class="tableheight hide">
+                        <table class="table table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">Points</th>
+                                    <th scope="col">Time</th>
+                                    <th scope="col">Words number</th>
+                                    <th scope="col">The letters</th>
+                                    <th scope="col">Author</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody">
+                            </tbody>
+                        </table>
+                    </div>
+                    <div id="tap2" class="result position-absolute m-auto top-50 hide">
+                        <table class="table bg-black table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">#</th>
+                                    <th scope="col">total point</th>
+                                    <th scope="col">total words number</th>
+                                    <th scope="col">total letters</th>
+                                    <th scope="col">total time</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tbody2">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+    <footer id="footer" class="text-center w-100  bg-gradient shadow overflow-auto">
+        <p class="my-3 fs-1 text-white"> Developed by <span class="cco fw-bolder">@Zain</span></p>
+    </footer>
+
+    <script src="bootstrap-5.3.2-dist/js/bootstrap.bundle.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
