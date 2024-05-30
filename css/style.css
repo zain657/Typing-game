@@ -118,7 +118,7 @@ nav span{
 
 @media (max-width:475px) {
     .schedule{
-        bottom: 2%;
+        bottom: 0;
     }
     header{
         height: 110vh;
